@@ -1,0 +1,21 @@
+---
+const links = [
+	{ label: 'Inicio', href: '#top' },
+	{ label: 'Sobre mi', href: '#sobre-mi' },
+	{ label: 'Proyectos', href: '#proyectos' },
+	{ label: 'Habilidades', href: '#habilidades' },
+	{ label: 'Experiencia', href: '#experiencia' },
+];
+---
+
+{
+	links.map(link => {
+		return (
+			<li>
+				<a href={link.href} class="font-medium capitalize">
+					{link.label}
+				</a>
+			</li>
+		);
+	})
+}

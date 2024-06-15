@@ -1,0 +1,33 @@
+---
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+
+interface Props {
+	containerStyles: string;
+	iconStyles: string;
+}
+const { containerStyles, iconStyles }: Props = Astro.props;
+
+const socials = [
+	{
+		icon: FaGithub,
+		path: 'https://github.com/DamSergio',
+	},
+	{
+		icon: FaLinkedinIn,
+		path: 'https://www.linkedin.com/in/serbalced/',
+	},
+];
+---
+
+<div class={containerStyles}>
+	{
+		socials.map(social => {
+			const Icon = social.icon;
+			return (
+				<a href={social.path} class={iconStyles}>
+					<Icon />
+				</a>
+			);
+		})
+	}
+</div>

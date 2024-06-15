@@ -1,0 +1,42 @@
+---
+import Navbar from '../components/Navbar.astro';
+import HamburgerIcon from '../components/icons/HamburgerIcon.astro';
+---
+
+<header class="px-2 py-8 text-white xl:py-12">
+	<div class="container mx-auto flex items-center justify-between">
+		<!-- logo -->
+		<a href="#top">
+			<h1 class="text-4xl font-semibold">
+				Sergio<span class="text-accent">.</span>
+			</h1>
+		</a>
+
+		<!-- desktop nav -->
+		<div class="flex flex-row-reverse gap-8 lg:flex-row">
+			<nav class="hidden items-center gap-8 lg:flex">
+				<ul class="flex gap-8">
+					<Navbar />
+				</ul>
+			</nav>
+
+			<!-- mobile nav -->
+			<nav class="dropdown dropdown-end items-center lg:hidden">
+				<div tabindex="0" role="button" class="btn btn-accent p-2">
+					<HamburgerIcon class="size-8" />
+				</div>
+
+				<ul
+					tabindex="0"
+					class="dropdown-content menu bg-accent rounded-box z-[1] mt-4 w-52 p-2 shadow"
+				>
+					<Navbar />
+				</ul>
+			</nav>
+
+			<div role="button" class="btn btn-accent">
+				<a href="#contacto">Contacto</a>
+			</div>
+		</div>
+	</div>
+</header>
