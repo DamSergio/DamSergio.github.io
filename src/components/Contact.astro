@@ -16,7 +16,11 @@ const apiKey = import.meta.env.CONTACT_API_KEY;
 		novalidate
 	>
 		<!-- Add your Web3Forms Access Key -->
-		<input type="hidden" name="access_key" value={apiKey} />
+		<input
+			type="hidden"
+			name="access_key"
+			value="b6eac070-adbb-4978-bdb2-ea3ddb8c08b9"
+		/>
 
 		<input
 			type="checkbox"
@@ -57,7 +61,7 @@ const apiKey = import.meta.env.CONTACT_API_KEY;
 			<textarea
 				name="message"
 				required
-				placeholder="Your Message"
+				placeholder="Tu mensaje"
 				class="h-36 w-full rounded-md border border-accent px-4 py-3 outline-none ring-accent placeholder:text-slate-400 focus:border-accent focus:ring-4"
 			></textarea>
 			<div class="empty-feedback invalid-feedback mt-1 text-sm text-red-400">
