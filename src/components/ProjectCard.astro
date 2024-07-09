@@ -10,7 +10,7 @@ interface Props {
 const { image, title, description, tags, link } = Astro.props;
 ---
 
-<div class="card carousel-item w-96 bg-base-100 shadow-xl">
+<div class="card carousel-item w-5/6 bg-base-100 shadow-xl md:w-96">
 	<figure>
 		<img src={image} alt={title} />
 	</figure>
