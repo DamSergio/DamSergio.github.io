@@ -9,7 +9,7 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d docs"
+		"deploy": "gh-pages -d docs https://github.com/DamSergio/portfolio.git"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.7.0",
