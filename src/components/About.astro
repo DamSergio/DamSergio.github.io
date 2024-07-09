@@ -1,5 +1,68 @@
 ---
 import { Image } from 'astro:assets';
+import JavaIcon from './icons/JavaIcon.astro';
+import PythonIcon from './icons/PythonIcon.astro';
+import JavaScriptIcon from './icons/JavaScriptIcon.astro';
+import TypeScriptIcon from './icons/TypeScriptIcon.astro';
+import HtmlIcon from './icons/HtmlIcon.astro';
+import CssIcon from './icons/CssIcon.astro';
+import ReactIcon from './icons/ReactIcon.astro';
+import SqlIcon from './icons/SqlIcon.astro';
+import EclipseIcon from './icons/EclipseIcon.astro';
+import VsCodeIcon from './icons/VsCodeIcon.astro';
+
+const technologies = [
+	{
+		name: 'Java',
+		url: 'https://www.oracle.com/es/java/',
+		icon: JavaIcon,
+	},
+	{
+		name: 'Python',
+		url: 'https://www.python.org/',
+		icon: PythonIcon,
+	},
+	{
+		name: 'JavaScript',
+		url: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+		icon: JavaScriptIcon,
+	},
+	{
+		name: 'TypeScript',
+		url: 'https://www.typescriptlang.org/',
+		icon: TypeScriptIcon,
+	},
+	{
+		name: 'HTML',
+		url: 'https://developer.mozilla.org/es/docs/Web/HTML',
+		icon: HtmlIcon,
+	},
+	{
+		name: 'CSS',
+		url: 'https://developer.mozilla.org/es/docs/Web/CSS',
+		icon: CssIcon,
+	},
+	{
+		name: 'React',
+		url: 'https://es.reactjs.org/',
+		icon: ReactIcon,
+	},
+	{
+		name: 'SQL',
+		url: 'https://www.oracle.com/es/database/what-is-database/',
+		icon: SqlIcon,
+	},
+	{
+		name: 'Eclipse',
+		url: 'https://www.eclipse.org/',
+		icon: EclipseIcon,
+	},
+	{
+		name: 'VSCode',
+		url: 'https://code.visualstudio.com/',
+		icon: VsCodeIcon,
+	},
+];
 ---
 
 <section
@@ -10,15 +73,37 @@ import { Image } from 'astro:assets';
 		Sobre mi<span class="text-accent">.</span>
 	</h1>
 	<div class="flex flex-col gap-2 lg:flex-row">
-		<p class="text-balance text-xl">
-			Soy un desarrollador software full stack español<span class="text-accent"
-				>.</span
-			> Aunque hago de todo mi parte favorita es el backend, ya sea haciendo apis,
-			haciendo base de datos o diseñando un sistema<span class="text-accent"
-				>.</span
-			> Aunque sea recien graduado siempre estoy aprendiendo nuevas cosas que me
-			llamen la atencion<span class="text-accent">.</span>
-		</p>
+		<div class="flex flex-col">
+			<p class="text-balance text-xl">
+				Soy un desarrollador software full stack español<span
+					class="text-accent">.</span
+				> Aunque hago de todo mi parte favorita es el backend, ya sea haciendo apis,
+				haciendo base de datos o diseñando un sistema<span class="text-accent"
+					>.</span
+				> Aunque sea recien graduado siempre estoy aprendiendo nuevas cosas que me
+				llamen la atencion<span class="text-accent">.</span>
+			</p>
+
+			<br />
+
+			<h2 class="mb-4 text-3xl text-accent">Tecnologias mas usadas.</h2>
+
+			<ul class="flex flex-wrap items-center justify-center">
+				{
+					technologies.map(technology => (
+						<li>
+							<a
+								href={technology.url}
+								class="me-4 flex flex-col items-center justify-center hover:underline md:me-6"
+							>
+								<technology.icon class="h-12 w-12" />
+								{technology.name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
 		<Image
 			src="/assets/coding.jpg"
 			alt="coding"
