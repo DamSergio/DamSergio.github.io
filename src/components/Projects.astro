@@ -25,7 +25,9 @@ const projects = [
 	class="esconder container mx-auto flex min-h-screen flex-col justify-center gap-4"
 	id="proyectos"
 >
-	<h1 class="mb-4 text-6xl">Proyectos<span class="text-accent">.</span></h1>
+	<h1 class="mb-4 text-5xl md:text-6xl">
+		Proyectos<span class="text-accent">.</span>
+	</h1>
 	<div class="carousel gap-2 rounded-box">
 		{projects.map(project => <ProjectCard {...project} />)}
 	</div>
