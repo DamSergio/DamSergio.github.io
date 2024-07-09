@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section
+	class="esconder container mx-auto flex min-h-screen flex-col justify-center gap-4"
+	id="sobre-mi"
+>
+	<h1 class="mb-4 text-6xl">Sobre mi<span class="text-accent">.</span></h1>
+	<div class="flex gap-2">
+		<p class="text-balance text-xl">
+			Soy un desarrollador software full stack español<span class="text-accent"
+				>.</span
+			> Aunque hago de todo mi parte favorita es el backend, ya sea haciendo apis,
+			haciendo base de datos o diseñando un sistema<span class="text-accent"
+				>.</span
+			> Aunque sea recien graduado siempre estoy aprendiendo nuevas cosas que me
+			llamen la atencion<span class="text-accent">.</span>
+		</p>
+		<Image
+			src="/assets/coding.jpg"
+			alt="coding"
+			width="700"
+			height="700"
+			class="rounded-badge border-4 border-accent"
+		/>
+	</div>
+</section>

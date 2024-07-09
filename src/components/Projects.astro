@@ -1,0 +1,32 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+	{
+		image: '/assets/dnd-front.png',
+		title: 'DND Portable (Front)',
+		description:
+			'Una aplicacion para poder crearte personajes de DND y llevarlos contigo a todas partes. Esta es la version de Frontend de la aplicacion.',
+		tags: ['React', 'Tailwind', 'TypeScript', 'Node'],
+		link: 'https://github.com/DamSergio/dnd-frontend-final-project',
+	},
+	{
+		image: '/assets/dnd-back.png',
+		title: 'DND Portable (Back)',
+		description:
+			'Una aplicacion para poder crearte personajes de DND y llevarlos contigo a todas partes. Esta es la version de Backend de la aplicacion.',
+		tags: ['Python', 'MongoDB', 'FastAPI', 'JWT'],
+		link: 'https://github.com/DamSergio/dnd-backend-final-project',
+	},
+];
+---
+
+<section
+	class="esconder container mx-auto flex min-h-screen flex-col justify-center gap-4"
+	id="proyectos"
+>
+	<h1 class="mb-4 text-6xl">Proyectos<span class="text-accent">.</span></h1>
+	<div class="carousel gap-2 rounded-box">
+		{projects.map(project => <ProjectCard {...project} />)}
+	</div>
+</section>

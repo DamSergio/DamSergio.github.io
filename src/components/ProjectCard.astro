@@ -1,0 +1,29 @@
+---
+interface Props {
+	image: string;
+	title: string;
+	description: string;
+	tags: string[];
+	link: string;
+}
+
+const { image, title, description, tags, link } = Astro.props;
+---
+
+<div class="card carousel-item w-96 bg-base-100 shadow-xl">
+	<figure>
+		<img src={image} alt={title} />
+	</figure>
+	<div class="card-body">
+		<h2 class="card-title">{title}</h2>
+		<p>{description}</p>
+		<div class="flex flex-wrap gap-2">
+			{tags.map(tag => <span class="badge badge-accent">{tag}</span>)}
+		</div>
+		<div class="card-actions justify-end">
+			<a href={link}>
+				<button class="btn btn-accent">Enlace</button>
+			</a>
+		</div>
+	</div>
+</div>

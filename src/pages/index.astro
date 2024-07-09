@@ -2,11 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Home from '../components/Home.astro';
+import Experience from '../components/Experience.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 ---
 
-<Layout title="Portfolio">
+<Layout
+	title="Portfolio de Sergio Ballesteros - Desarrollador y Programador Full Stack"
+	description="Contrata a Sergio Ballesteros para crear tu aplicacion web o movil."
+>
 	<Header />
 	<main class="px-2">
 		<Home />
+		<Experience />
+		<About />
+		<Projects />
+		<Contact />
 	</main>
 </Layout>

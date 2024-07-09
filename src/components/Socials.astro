@@ -24,7 +24,7 @@ const socials = [
 		socials.map(social => {
 			const Icon = social.icon;
 			return (
-				<a href={social.path} class={iconStyles}>
+				<a href={social.path} class={iconStyles} aria-label="icono">
 					<Icon />
 				</a>
 			);

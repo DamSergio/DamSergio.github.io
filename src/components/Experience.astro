@@ -1,0 +1,61 @@
+---
+const experience = [
+	{
+		company: 'HP CDS.',
+		time: '2024.',
+		job: 'Estudiante en practicas.',
+		summary:
+			'Resolvia incidencias y bugs relacionados con la web, ya fuese el front con Angular o el back con Java Spring Boot. Tambien implemente test unitarios, modifique scripts para mejorar su rendimiento y programe scripts nuevos para automatizar tareas en el back.',
+	},
+];
+---
+
+<section
+	class="esconder container mx-auto flex min-h-screen flex-col justify-center gap-4"
+	id="experiencia"
+>
+	<h1 class="mb-4 text-6xl">Experiencia<span class="text-accent">.</span></h1>
+	<ul
+		class="timeline timeline-vertical timeline-snap-icon gap-0 max-md:timeline-compact"
+	>
+		{
+			experience.map((job, index) => {
+				const position =
+					index % 2 === 1 ? 'timeline-end' : 'timeline-start md:text-end';
+
+				return (
+					<li class="">
+						<div class={`${position}`} style="margin-bottom: 2.5rem;">
+							<time class="font-mono italic">{job.time}</time>
+							<div class="text-lg font-black text-accent">{job.company}</div>
+							<div>
+								<span class="font-black text-accent">{job.job}</span>
+								<div class="divider" />
+								<p>{job.summary}</p>
+								<div class="divider" />
+							</div>
+						</div>
+						<hr
+							class={`bg-accent ${index === 0 && 'hidden'}`}
+							style="grid-column: 2; grid-row: 1;"
+						/>
+						<hr class="bg-accent" style="grid-column: 2; grid-row: 2;" />
+						<hr class="bg-accent" />
+					</li>
+				);
+			})
+		}
+	</ul>
+</section>
+
+<style>
+	.trabajo:nth-child(2) {
+		transition-delay: 200ms;
+	}
+	.trabajo:nth-child(3) {
+		transition-delay: 400ms;
+	}
+	.trabajo:nth-child(4) {
+		transition-delay: 600ms;
+	}
+</style>
